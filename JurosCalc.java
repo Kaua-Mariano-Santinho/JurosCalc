@@ -51,21 +51,25 @@ public class JurosCalc{
 
             case 2:
             System.out.println("\n\t\tVocê escolheu: Calcule seu capital");
-            System.out.print("Informe seu juros:");
-            j = open.nextInt();
-    
-            System.out.print("Informe qual é o juros ao mês (em porcentagem):");
-            i = open.nextInt();
-    
-            System.out.print("Por fim, informe o tempo (em mês):");
-            t = open.nextInt();
-    
+
+            System.out.print("Informe seu juros: ");
+            j = open.nextDouble();
+            open.nextLine(); // 
+
+            System.out.print("Informe qual é o juros ao mês (em porcentagem): ");
+            i = open.nextDouble();
+            open.nextLine();
+
+            System.out.print("Por fim, informe o tempo (em mês): ");
+            t = open.nextDouble();
+            open.nextLine();
+
             // Processamento
             
             c = j / ((i / 100) * t);
     
             // Saída 1
-            System.out.println("R$" + c + "0 é o seu capital!");
+            System.out.printf("R$%.2f é o seu capital!\n", c);
                 break;
 
             case 3:
