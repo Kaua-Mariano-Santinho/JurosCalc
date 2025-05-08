@@ -26,7 +26,7 @@ public class JurosCalc{
         // Entradas
         switch (op) {
             case 1:
-            System.out.println("\n\t\tVocê escolheu Cacule seu juros");
+            System.out.println("\n\t\tVocê escolheu: Calculadora de Juros");
             System.out.print("Informe seu capital:");
             c = open.nextInt();
     
@@ -48,8 +48,9 @@ public class JurosCalc{
             
             System.out.println("R$" + m + "0 é o seu Juros adicionado ao seu Capital inicial!");
             break;
+
             case 2:
-            System.out.println("\n\t\tVocê escolheu Cacule seu capital");
+            System.out.println("\n\t\tVocê escolheu: Calcule seu capital");
             System.out.print("Informe seu juros:");
             j = open.nextInt();
     
@@ -61,14 +62,14 @@ public class JurosCalc{
     
             // Processamento
             
-            i2 = i / 100;
-            c = j / (i2 / 100 * t);
+            c = j / ((i / 100) * t);
     
             // Saída 1
             System.out.println("R$" + c + "0 é o seu capital!");
                 break;
+
             case 3:
-            System.out.println("\n\t\tVocê escolheu Cacule sua taxa");
+            System.out.println("\n\t\tVocê escolheu: Calculadora de Taxa");
             System.out.print("Informe seu juros:");
             j = open.nextInt();
     
@@ -83,9 +84,41 @@ public class JurosCalc{
             i = (j / (c * t)) * 100;
             
             // Saída 1
-            System.out.println(c + "% é a sua taxa!");
+            System.out.println(i + "% é a sua taxa!");
+                break;
+            
+            case 4:
+            System.out.println("\n\t\tVocê escolheu: Calculadora do tempo");
+            System.out.print("Informe seu capital:");
+            c = open.nextInt();
+    
+            System.out.print("Informe qual a taxa (em porcentagem):");
+            i = open.nextInt();
+    
+            System.out.print("Por fim, informe o juros obtido:");
+            j = open.nextInt();
+
+            // Processamento
+            
+            t = (j / (c * i / 100));
+
+            // Saída 1
+            System.out.println(t + ": Esse é o tempo em meses.");
+                break;
+
+            case 5:
+            System.out.println("Até mais, meu chapinha.");
+                break;
+
+            //Saída Bisonha
+            case 6:
+            System.out.println("Escolha uma opção certa, meu chapinha.");
                 break;
             }
-        }
+
+            
+        } while (op != 5);
+
+        open.close();
     }
 }
